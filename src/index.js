@@ -1,5 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+// Providerがあることによって、Reduxを利用することが可能
+import { Provider } from 'react-redux';
 import App from './App';
+import reducer from './redux/reducers';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Store = createStore(reducer);
+
+ReactDOM.render(
+  <Provider store={Store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
