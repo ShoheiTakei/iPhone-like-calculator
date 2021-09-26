@@ -62,7 +62,7 @@ const calculator = (state = initialAppState, action) => {
         return {
           ...state,
           inputValue: 0,
-          operator: '*',
+          operator: '-',
           calculate: true,
           resultValue: state.inputValue,
           showingResult: true,
