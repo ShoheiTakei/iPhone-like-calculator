@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Result = () => {
-  return (
-    <div>
-      <p>Result</p>
-    </div>
-  );
+const Result = ({ result }) => {
+  return <div className="resultValue">{result}</div>;
 };
 
 export default Result;
